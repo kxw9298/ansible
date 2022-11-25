@@ -18,5 +18,5 @@ docker exec -it ansible sh
 Run ansible playbook
 ```
 cd ansible
-ansible-playbook -i inventory/example1.yaml ansible/example1.yaml
+ansible-playbook -i inventory/example1.yaml ansible/example1.yaml --extra-vars="server=Ubuntu"
 ```

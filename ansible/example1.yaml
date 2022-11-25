@@ -4,7 +4,7 @@
   hosts: localhost 
   vars:
     version_number: '2.4.37'
-    server: 'Ubuntu'
+    # server: 'Ubuntu'
   gather_facts: false
   roles:
     - { role: generate-example-template }
