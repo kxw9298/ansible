@@ -1,4 +1,8 @@
 ---
+- name: "print api_groups"
+  debug:
+    msg: "{{ api_groups }}"
+
 - name: "print api"
   include_role:
       name: print-api
