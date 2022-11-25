@@ -1,0 +1,8 @@
+---
+- name: "print api"
+  loop: "{{ api_groups }}"
+  loop_control: 
+    loop_var: loop_item
+  when: api_groups is defined and (api_groups | length > 0)
+  debug: 
+    msg: "api: {{ loop_item.name }}"

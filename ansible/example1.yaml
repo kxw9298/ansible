@@ -1,9 +1,11 @@
 ---
 # test playbook
-- hosts: localhost 
+- name: example1
+  hosts: localhost 
   vars:
     version_number: '2.4.37'
     server: 'Ubuntu'
   gather_facts: false
   roles:
     - { role: generate-example-template }
+    - { role: get-api-list }

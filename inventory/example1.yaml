@@ -1,0 +1,8 @@
+all:
+  hosts: localhost
+  vars:
+    api_groups:
+      - name: "retails"
+        environment: "dev"
+      - name: "management"
+        environment: "prod"
