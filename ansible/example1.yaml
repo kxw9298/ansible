@@ -4,9 +4,6 @@
   vars:
     version_number: '2.4.37'
     server: 'Ubuntu'
-
-  tasks:
-    - name: a jinja2 example
-      template:
-        src: example_template.j2
-        dest: file.txt
+  gather_facts: false
+  roles:
+    - { role: generate-example-template }
