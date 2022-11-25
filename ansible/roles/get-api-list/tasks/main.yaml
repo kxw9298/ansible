@@ -1,8 +1,12 @@
 ---
 - name: "print api"
+  include_role:
+      name: print-api
+  vars:
+      name: "{{ loop_item.name }}"
+      environment: "{{ loop_item.environment }}"
   loop: "{{ api_groups }}"
   loop_control: 
     loop_var: loop_item
   when: api_groups is defined and (api_groups | length > 0)
-  debug: 
-    msg: "api: {{ loop_item.name }}"
+  
