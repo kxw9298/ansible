@@ -1,3 +1,11 @@
 ---
 - name: sample jinja2 template
   template: src='example_template.j2' dest='{{ playbook_dir}}/../output/file.txt' mode=0755
+
+- name: "pwd"
+  shell: "pwd"
+  register: current_path
+  
+- name: "print message"
+  debug: 
+    msg: "pwd: {{ current_path }}"
