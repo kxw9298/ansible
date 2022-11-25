@@ -7,8 +7,8 @@
   include_role:
       name: print-api
   vars:
-      name: "{{ loop_item.name }}"
-      environment: "{{ loop_item.environment }}"
+      item: "{{ loop_item }}"
+      # environment: "{{ loop_item.environment }}"
   loop: "{{ api_groups }}"
   loop_control: 
     loop_var: loop_item

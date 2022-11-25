@@ -1,8 +1,8 @@
 ---
 - name: "print api name"
   debug:
-    msg: "name: {{ name }}"
+    msg: "name: {{ item.name }}"
 
 - name: "print environment name"
   debug:
-    msg: "environment: {{ environment }}"
+    msg: "environment: {{ item.environment }}"
